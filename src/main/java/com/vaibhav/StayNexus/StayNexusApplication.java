@@ -16,7 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  *                         for @Component, @Service, @Repository, @Controller etc.
  *
  * @EnableScheduling — activates the @Scheduled annotation.
- *   We use this in PricingUpdateService to run the hourly price recalculation job.
+ *   We use this in PricingUpdateService to run the hourly price re-calculation job.
  *   Without this annotation, @Scheduled methods silently do nothing.
  */
 @SpringBootApplication

@@ -11,6 +11,7 @@ import com.vaibhav.StayNexus.Exceptions.UnAuthorisedException;
 import com.vaibhav.StayNexus.Repositories.HotelRepository;
 import com.vaibhav.StayNexus.Repositories.RoomRepository;
 import com.vaibhav.StayNexus.Service.Interfaces.HotelService;
+import com.vaibhav.StayNexus.Service.Interfaces.InventoryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;

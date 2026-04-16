@@ -1,7 +1,10 @@
 package com.vaibhav.StayNexus.Controller;
 
 import com.vaibhav.StayNexus.Dto.HotelInfoDto;
+import com.vaibhav.StayNexus.Dto.HotelPriceDTO;
+import com.vaibhav.StayNexus.Dto.HotelSearchRequest;
 import com.vaibhav.StayNexus.Service.Interfaces.HotelService;
+import com.vaibhav.StayNexus.Service.Interfaces.InventoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

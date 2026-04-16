@@ -6,6 +6,7 @@ import com.vaibhav.StayNexus.Entities.RoomEntity;
 import com.vaibhav.StayNexus.Exceptions.ResourceNotFoundException;
 import com.vaibhav.StayNexus.Repositories.HotelRepository;
 import com.vaibhav.StayNexus.Repositories.RoomRepository;
+import com.vaibhav.StayNexus.Service.Interfaces.InventoryService;
 import com.vaibhav.StayNexus.Service.Interfaces.RoomService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

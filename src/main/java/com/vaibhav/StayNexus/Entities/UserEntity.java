@@ -40,8 +40,10 @@ public class UserEntity implements UserDetails {
 
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
+    @CollectionTable(name = "app_user_roles",
+            joinColumns = @JoinColumn(name = "app_user_id"))
+    @Column(name = "roles")
     private Set<Role> roles;
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream()

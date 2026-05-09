@@ -57,6 +57,21 @@ public interface InventoryRepository extends JpaRepository<InventoryEntity , Lon
             @Param("roomsCount") Integer roomsCount
     );
 
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Query("""
+            SELECT i FROM InventoryEntity i
+            WHERE i.room.id = :roomId
+              AND i.date BETWEEN :startDate AND :endDate
+              AND (i.totalCount - i.bookCount) >= :numberOfRooms
+              AND i.closed = false
+            """)
+    List<InventoryEntity> findAndLockReservedInventory(
+            @Param("roomId") Long roomId,
+            @Param("startDate") LocalDate startDate,
+            @Param("endDate") LocalDate endDate,
+            @Param("numberOfRooms") int numberOfRooms
+    );
+
 
     @Modifying
     @Query("""
